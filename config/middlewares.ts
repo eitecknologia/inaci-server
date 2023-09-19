@@ -12,7 +12,7 @@ export default [
             "'self'",
             'data:',
             'blob:',
-            'market-assets.strapi.io',
+            // 'market-assets.strapi.io',
             'res.cloudinary.com',
           ],
           upgradeInsecureRequests: null,
