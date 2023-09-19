@@ -1,22 +1,18 @@
-import app from './app';
-import dotenv from 'dotenv';
-import { Bootstrap } from './bootstrap/bootstrap';
-import { ServerBootstrap } from './bootstrap/Server.bootstrap';
+export default {
+  /**
+   * An asynchronous register function that runs before
+   * your application is initialized.
+   *
+   * This gives you an opportunity to extend code.
+   */
+  register(/*{ strapi }*/) {},
 
-dotenv.config();
-
-const server: Bootstrap = new ServerBootstrap(app);
-
-(async () => {
-    try {
-        const promises: Array<Promise<boolean | Error>> = [
-            server.initialize()
-        ];
-
-        await Promise.all(promises);
-
-    } catch (error: (NodeJS.ErrnoException | Error | any)) {
-        console.error(error);
-        server.close();
-    }
-})();
+  /**
+   * An asynchronous bootstrap function that runs before
+   * your application gets started.
+   *
+   * This gives you an opportunity to set up your data model,
+   * run jobs, or perform some special logic.
+   */
+  bootstrap(/*{ strapi }*/) {},
+};
