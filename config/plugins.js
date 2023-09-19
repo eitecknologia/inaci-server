@@ -15,7 +15,7 @@ module.exports = ({ env }) => ({
             },
           },
           uploadStream: {
-            folder: 'eiteck/inaci',
+            folder: env('CLOUDINARY_FOLDER'),
           },
           delete: {},
         },
@@ -34,8 +34,8 @@ module.exports = ({ env }) => ({
           // ... any custom nodemailer options
         },
         settings: {
-          defaultFrom: 'cristhianalejandroguadalupe@gmail.com',
-          defaultReplyTo: 'cristhianalejandroguadalupe@gmail.com',
+          defaultFrom: env('EMAIL_FROM'),
+          defaultReplyTo: env('EMAIL_REPLY_TO'),
         },
       },
     },
