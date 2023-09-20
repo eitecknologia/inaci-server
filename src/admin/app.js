@@ -1,3 +1,5 @@
+// @ts-nocheck
+import favicon from './extensions/favicon.png'
 const config = {
   notifications: {
     releases: false,
@@ -12,7 +14,10 @@ const config = {
     en: {
       "Auth.form.email.label": "Email",
       "app.components.LeftMenu.navbrand.title": "INACI",
+    },
   },
+  head:{
+    favicon: favicon,
   },
   locales: [
     // 'ar',
